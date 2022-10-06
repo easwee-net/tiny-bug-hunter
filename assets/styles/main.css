@@ -3,6 +3,10 @@
   src: url("../fonts/PressStart2P-Regular.ttf");
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   margin: 0;
@@ -12,27 +16,72 @@ body {
 }
 
 body {
-  background: gray;
+  background: white;
   margin: 0;
-  font-family: sans-serif;
+  font-family: monospace, sans-serif;
   line-height: 1.4;
   font-size: 16px;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 main {
   max-width: 600px;
   width: 100%;
   margin: 0 auto;
-  padding-top: 100px;
+  position: relative;
+  padding: 100px 20px;
 }
 
 h1 {
   font-family: "Press Start 2P", monospace;
-  font-size: 32px;
+  font-size: 28px;
+}
+
+.start {
+  font-family: "Press Start 2P", monospace;
+  font-size: 24px;
+  color: red;
 }
 
 img {
   display: block;
   max-width: 600px;
+  max-height: 330px;
   width: 100%;
+  height: 100%;
+}
+
+a.next,
+a.prev {
+  display: block;
+  position: fixed;
+  top: 160px;
+  left: 50%;
+  font-size: 150px;
+  text-decoration: none;
+  color: gray;
+  transform-origin: center center;
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  text-align: center;
+}
+
+a.next:hover,
+a.prev:hover {
+  color: green;
+}
+
+a.next {
+  transform: translateX(calc(-50% + 350px));
+}
+a.prev {
+  transform: translateX(calc(-50% - 350px));
+}
+
+@media (max-width: 830px) {
+  main {
+    padding: 20px;
+  }
 }
