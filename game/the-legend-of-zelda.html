@@ -4,11 +4,25 @@
 <head>
     <title>The Legend of Zelda</title>
     <link href="../assets/styles/main.css" rel="stylesheet" />
+    <style>
+        .buggy {
+            position: fixed;
+            font-size: 200px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+
+        .visible {
+            display: block !important;
+        }
+    </style>
 </head>
 
 <body>
     <main>
-        <img src="../assets/images/the-legend-of-zelda.jpg" alt="The Legend of Zelda" title="The Legend of Zelda" />
+        <img src="../assets/images/the-legend-of-zelda.png" alt="The Legend of Zelda" title="The Legend of Zelda" />
         <h1>The Legend of Zelda</h1>
         <p class="release-year">1986</p>
         <p>
@@ -34,7 +48,13 @@
         </p>
         <a href="kontrabant.html" class="prev" title="Nazaj">◄</a>
         <a href="prince-of-persia.html" class="next" title="Naprej">►</a>
+        <span id="bug" class="buggy">🪲</span>
     </main>
+    <script>
+        window.addEventListener("keydown", () => {
+            document.getElementById("bug").classList.add("visible")
+        });
+    </script>
 </body>
 
 </html>

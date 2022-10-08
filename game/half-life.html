@@ -4,31 +4,73 @@
 <head>
     <title>Half-Life</title>
     <link href="../assets/styles/main.css" rel="stylesheet" />
+    <style>
+        #bug {
+            font-size: 50px;
+        }
+    </style>
 </head>
 
 <body>
     <main>
-        <img src="../assets/images/half-life.jpg" alt="Half-Life" title="Half-Life" />
+        <img src="../assets/images/half-life.png" alt="Half-Life" title="Half-Life" />
         <h1>Half-Life</h1>
         <p class="release-year">1998</p>
-        <p>
-            Half-life (angleški izraz za razpolovni čas) ali je znanstvenofantastična prvoosebna strelska videoigra, ki
-            jo je razvilo podjetje Valve Software. Prvič je bila izdana 19. novembra 1998 pri založniku Sierra Studios.
-            Namenjena je osebnim računalnikom z operacijskim sistemom Microsoft Windows in uporablja zelo predelano
-            verzijo grafičnega pogona igre Quake imenovanega GoldSrc.
-        </p>
-        <p>
-            V igri igralec prevzame vlogo Dr. Gordona Freemana, pred kratkim diplomiranega teoretičnega fizika, ki si
-            mora izboriti pot iz podzemnega laboratorija, katerega poskusi so šli hudo narobe. Igra je leta 1998 dobila
-            50 nagrad za igro leta in je obravnavana kot ena najboljših iger vseh časov. Leta 2001 je bila izdana tudi
-            različica za PlayStation 2.
-        </p>
+        <div id="description">
+            <p>
+                Half-life (angleški izraz za razpolovni čas) je znanstvenofantastična prvoosebna strelska videoigra,
+                ki
+                jo je razvilo podjetje Valve Software. Prvič je bila izdana 19. novembra 1998 pri založniku Sierra
+                Studios.
+                Namenjena je osebnim računalnikom z operacijskim sistemom Microsoft Windows in uporablja zelo predelano
+                verzijo grafičnega pogona igre Quake imenovanega GoldSrc.
+            </p>
+            <p>
+                V igri igralec prevzame vlogo Dr. Gordona Freemana, pred kratkim diplomiranega teoretičnega fizika, ki
+                si
+                mora izboriti pot iz podzemnega laboratorija, katerega poskusi so šli hudo narobe. Igra je leta 1998
+                dobila
+                50 nagrad za igro leta in je obravnavana kot ena najboljših iger vseh časov. Leta 2001 je bila izdana
+                tudi
+                različica za PlayStation 2.
+            </p>
+        </div>
+        <div id="bug" style="display: none;">
+            🪲 NJAM NJAM.
+        </div>
         <p>
             Vir: <a href="https://sl.wikipedia.org/wiki/Half-Life">https://sl.wikipedia.org/wiki/Half-Life</a>
         </p>
-        <a href="grand-theft-auto.html" class="prev" title="Nazaj">◄</a>
-        <a href="heroes-of-might-and-magic.html" class="next" title="Naprej">►</a>
+        <a href="heroes-of-might-and-magic.html" class="prev" title="Nazaj">◄</a>
+        <!-- <a href="heroes-of-might-and-magic.html" class="next" title="Naprej">►</a> -->
     </main>
+    <script>
+        var description = document.getElementById("description");
+        var bug = document.getElementById("bug");
+
+        var isChromium = window.chrome;
+        var winNav = window.navigator;
+        var vendorName = winNav.vendor;
+        var isOpera = typeof window.opr !== "undefined";
+        var isIEedge = winNav.userAgent.indexOf("Edg") > -1;
+        var isIOSChrome = winNav.userAgent.match("CriOS");
+
+        if (isIOSChrome) {
+            // is Google Chrome on IOS
+        } else if (
+            isChromium !== null &&
+            typeof isChromium !== "undefined" &&
+            vendorName === "Google Inc." &&
+            isOpera === false &&
+            isIEedge === false
+        ) {
+            // is Google Chrome
+        } else {
+            // not Google Chrome
+            description.style.display = "none";
+            bug.style.display = "block";
+        }
+    </script>
 </body>
 
 </html>

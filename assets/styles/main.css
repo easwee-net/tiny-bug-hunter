@@ -26,7 +26,7 @@ body {
 }
 
 main {
-  max-width: 600px;
+  max-width: 800px;
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -35,7 +35,8 @@ main {
 
 h1 {
   font-family: "Press Start 2P", monospace;
-  font-size: 28px;
+  font-size: 24px;
+  margin: 20px 0 0 0;
 }
 
 .start {
@@ -46,21 +47,36 @@ h1 {
 
 img {
   display: block;
-  max-width: 600px;
-  max-height: 330px;
+  max-width: 800px;
   width: 100%;
   height: 100%;
+}
+
+.release-year {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-top: 5px;
+}
+
+a {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: top;
 }
 
 a.next,
 a.prev {
   display: block;
-  position: fixed;
-  top: 160px;
+  position: absolute;
+  top: 210px;
   left: 50%;
   font-size: 150px;
   text-decoration: none;
-  color: gray;
+  color: black;
   transform-origin: center center;
   width: 150px;
   height: 150px;
@@ -74,14 +90,31 @@ a.prev:hover {
 }
 
 a.next {
-  transform: translateX(calc(-50% + 350px));
+  transform: translateX(calc(-50% + 450px));
 }
 a.prev {
-  transform: translateX(calc(-50% - 350px));
+  transform: translateX(calc(-50% - 450px));
 }
 
-@media (max-width: 830px) {
+@media (max-width: 1024px) {
   main {
     padding: 20px;
+  }
+
+  a.next,
+  a.prev {
+    top: 140px;
+    color: white;
+    opacity: 0.5;
+  }
+
+  a.next {
+    transform: none;
+    right: 10px;
+    left: auto;
+  }
+  a.prev {
+    transform: none;
+    left: 10px;
   }
 }

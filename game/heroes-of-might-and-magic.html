@@ -4,11 +4,16 @@
 <head>
     <title>Heroes of Might and Magic III</title>
     <link href="../assets/styles/main.css" rel="stylesheet" />
+    <style>
+        .bugged {
+            cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🪲</text></svg>") 16 0, auto;
+        }
+    </style>
 </head>
 
 <body>
     <main>
-        <img src="../assets/images/homm3.jpg" alt="Heroes of Might and Magic III"
+        <img src="../assets/images/homm3.png" alt="Heroes of Might and Magic III"
             title="Heroes of Might and Magic III" />
         <h1>Heroes of Might and Magic III</h1>
         <p class="release-year">1999</p>
@@ -24,9 +29,19 @@
                 https://sl.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III:_The_Restoration_of_Erathia
             </a>
         </p>
-        <a href="half-life.html" class="prev" title="Nazaj">◄</a>
-        <!-- <a href="age-of-empires.html" class="next" title="Naprej">►</a> -->
+        <a href="grand-theft-auto.html" class="prev" title="Nazaj">◄</a>
+        <a href="half-life.html" class="next" title="Naprej">►</a>
     </main>
+    <script>
+        let counter = 0;
+        window.addEventListener("mousemove", () => {
+            counter++;
+            console.log(counter)
+            if (counter > 500) {
+                document.body.classList.add("bugged");
+            }
+        })
+    </script>
 </body>
 
 </html>

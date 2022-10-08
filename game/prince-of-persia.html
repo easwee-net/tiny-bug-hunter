@@ -4,11 +4,24 @@
 <head>
     <title>Prince of Persia</title>
     <link href="../assets/styles/main.css" rel="stylesheet" />
+    <style>
+        .buggy {
+            position: fixed;
+            font-size: 100px;
+            transform: translate(-50%, -150px);
+            transform-origin: center center;
+            display: none;
+        }
+
+        .visible {
+            display: block !important;
+        }
+    </style>
 </head>
 
 <body>
     <main>
-        <img src="../assets/images/prince-of-persia.gif" alt="Prince of Persia" title="Prince of Persia" />
+        <img src="../assets/images/prince-of-persia.png" alt="Prince of Persia" title="Prince of Persia" />
         <h1>Prince of Persia</h1>
         <p class="release-year">1989</p>
         <p>
@@ -33,7 +46,18 @@
         </p>
         <a href="the-legend-of-zelda.html" class="prev" title="Nazaj">◄</a>
         <a href="civilization.html" class="next" title="Naprej">►</a>
+        <span id="bug" class="buggy">🪲</span>
     </main>
+    <script>
+        window.addEventListener("contextmenu", (event) => {
+            event.preventDefault();
+            const bug = document.getElementById("bug");
+
+            bug.style.left = event.screenX + "px";
+            bug.style.top = event.screenY + "px";
+            bug.classList.add("visible")
+        });
+    </script>
 </body>
 
 </html>

@@ -4,11 +4,27 @@
 <head>
     <title>Age of Empires</title>
     <link href="../assets/styles/main.css" rel="stylesheet" />
+    <style>
+        #bug {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            transition: all 5000ms linear;
+        }
+
+        .in {
+            opacity: 1;
+        }
+
+        .out {
+            opacity: 0;
+        }
+    </style>
 </head>
 
 <body>
     <main>
-        <img src="../assets/images/aoe.jpg" alt="Age of Empires" title="Age of Empires" />
+        <img src="../assets/images/aoe.png" alt="Age of Empires" title="Age of Empires" />
         <h1>Age of Empires</h1>
         <p class="release-year">1997</p>
         <p>
@@ -17,6 +33,7 @@
             Ensemble Studios, izdaja pa Microsoft. Prvi del je izšel leta 1997, od takrat pa je izšlo še šest delov in
             več izpeljank.
         </p>
+
         <p>
             Igralec v igrah vodi in razvija določeno ljudstvo (civilizacijo) in se bojuje proti drugim civilizacijam, ki
             jih predstavljajo drugi igralci ali pa računalnik. Igrati jih je možno samostojno ali pa proti človeškim
@@ -25,8 +42,24 @@
         <p>
             Vir: <a href="https://sl.wikipedia.org/wiki/Age_of_Empires">https://sl.wikipedia.org/wiki/Age_of_Empires</a>
         </p>
+        <div id="bug" class="out" style="font-size: 50px; text-align: center;">🪲</div>
         <a href="pokemon.html" class="prev" title="Nazaj">◄</a>
         <a href="grand-theft-auto.html" class="next" title="Naprej">►</a>
+        <script>
+            let buh = false;
+            const bug = document.getElementById("bug");
+
+            setInterval(() => {
+                if (!buh) {
+                    bug.classList.add("in");
+                    bug.classList.remove("out");
+                } else {
+                    bug.classList.add("out");
+                    bug.classList.remove("in");
+                }
+                buh = !buh;
+            }, 1000)
+        </script>
     </main>
 </body>
 

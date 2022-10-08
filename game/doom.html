@@ -4,11 +4,30 @@
 <head>
     <title>Doom</title>
     <link href="../assets/styles/main.css" rel="stylesheet" />
+    <style>
+        .buggy {
+            display: none;
+            text-align: center;
+            padding: 100px 0;
+            font-size: 100px;
+        }
+
+        @media(max-width: 900px) {
+            img {
+                display: none;
+            }
+
+            .buggy {
+                display: block;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <main>
-        <img src="../assets/images/doom.jpg" alt="Doom 🐛" title="Doom 🐛" />
+        <img src="../assets/images/doom.png" alt="Doom" title="Doom" />
+        <div class="buggy">🪲</div>
         <h1>Doom</h1>
         <p class="release-year">1993</p>
         <p>
