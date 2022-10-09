@@ -2,8 +2,8 @@ Bugs:
 
 1. Pong -> Bug v textu
 2. Space invaders -> Bug če z miško greš preko naslova
-3. Pac-Man -> Bug če označiš letnico z miško (ctrl+A lahko tudi kot zanimivost).
-4. Tetris -> Bug če greš z miško preko slike se v title textu pokaže bug.
+3. Pac-Man -> Bug če označiš letnico z miško (ctrl+A lahko tudi).
+4. Tetris -> Bug če greš z miško preko slike se po 3 sekundah delaya v 5 sekundah fade-ina privrti bug.
 5. Kontrabant - Bug če skrolaš daleč dol v stran ker je ful beline vmes.
 6. The legend of Zelda -> Bug če pritisneš bilokatero tipko (razen F5).
 7. Prince of Persia -> Bug če narediš desni klik z miško.

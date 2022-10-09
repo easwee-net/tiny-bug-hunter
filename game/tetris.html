@@ -3,12 +3,42 @@
 
 <head>
     <title>Tetris</title>
+    <link href="../assets/styles/animation.css" rel="stylesheet" />
     <link href="../assets/styles/main.css" rel="stylesheet" />
+    <style>
+        .image-holder {
+            position: relative;
+        }
+
+        .icon-invader {
+            position: absolute;
+            top: 35%;
+            left: 26%;
+            color: #c4fcb5;
+            opacity: 0;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            transform: translate(-50%, -50%) scale(0);
+            transform-origin: center center;
+            transition: all 5000ms;
+            transition-delay: 3000ms;
+        }
+
+        .image-holder:hover .icon-invader {
+            opacity: 0.8;
+            transform: translate(-50%, -50%) scale(1.2);
+        }
+    </style>
 </head>
 
 <body>
     <main>
-        <img src="../assets/images/tetris.png" alt="Tetris" title="Tetris 🪲" width="800px" height="450px" />
+        <div class="image-holder">
+            <img src="../assets/images/tetris.png" alt="Tetris" width="800px" height="450px" />
+            <i class="racmuz icon-invader animate-spin">&#xe800;</i>
+        </div>
         <h1>Tetris</h1>
         <p class="release-year">1984</p>
         <p>

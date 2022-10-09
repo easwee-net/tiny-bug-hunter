@@ -5,9 +5,12 @@
     <title>Pokemon</title>
     <link href="../assets/styles/main.css" rel="stylesheet" />
     <style>
-        p a:focus::after {
-            content: "🪲";
-            font-size: 24px;
+        p a .icon-invader {
+            display: none;
+        }
+
+        p a:focus .icon-invader {
+            display: inline;
         }
     </style>
 </head>
@@ -26,7 +29,12 @@
             igrače, igralne karte, ter seveda še več iger. Nastal pa je tudi anime (risana serija).
         </p>
         <p>
-            Vir: <a href="https://sl.wikipedia.org/wiki/Pokemon">https://sl.wikipedia.org/wiki/Pokemon</a>
+            Vir:
+            <a href="https://sl.wikipedia.org/wiki/Pokemon">
+                https://sl.wikipedia.org/wiki/Pokemon
+                <i class="racmuz icon-invader">&#xe800;</i>
+
+            </a>
         </p>
         <a href="doom.html" class="prev" title="Nazaj">◄</a>
         <a href="age-of-empires.html" class="next" title="Naprej">►</a>

@@ -9,8 +9,18 @@
             position: relative;
         }
 
-        h1:hover::after {
-            content: "🪲";
+        h1 .icon-invader {
+            position: absolute;
+            top: 0;
+            left: 350px;
+            opacity: 0;
+            transition: all 1000ms;
+        }
+
+        h1:hover .icon-invader {
+            display: inline;
+            vertical-align: top;
+            opacity: 1;
         }
     </style>
 </head>
@@ -18,7 +28,7 @@
 <body>
     <main>
         <img src="../assets/images/space-invaders.png" width="800px" height="450px" />
-        <h1>Space Invaders</h1>
+        <h1>Space Invaders <i class="racmuz icon-invader">&#xe800;</i></h1>
         <p class="release-year">1978</p>
         <p>
             Space Invaders (Vesoljski osvajalci oziroma zavojevalci) je bila ena prvih in najbolj znanih

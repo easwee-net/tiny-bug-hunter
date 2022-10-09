@@ -3,6 +3,26 @@
   src: url("../fonts/PressStart2P-Regular.ttf");
 }
 
+@font-face {
+  font-family: "racmuz";
+  src: url("../fonts/racmuz.eot?81949994");
+  src: url("../fonts/racmuz.eot?81949994#iefix") format("embedded-opentype"),
+    url("../fonts/racmuz.woff?81949994") format("woff"),
+    url("../fonts/racmuz.ttf?81949994") format("truetype"),
+    url("../fonts/racmuz.svg?81949994#racmuz") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.racmuz {
+  font-family: "racmuz";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -104,8 +124,9 @@ a.prev {
   a.next,
   a.prev {
     top: 140px;
-    color: white;
-    opacity: 0.5;
+    color: black;
+    text-shadow: 0 0 20px white;
+    opacity: 1;
   }
 
   a.next {
